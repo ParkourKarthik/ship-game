@@ -1,1 +1,33 @@
-<h1>Hello, World</h2>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="ship-game.css">
+
+</head>
+
+<body>
+    <div class="upper-panel">
+        <div class="help-tip">Drag and Drop the color blocks in the container before the ship hits the container.</div>
+        <button id="pause" class="button" onclick="togglePause()">PAUSE</button>
+        <div class="body-panel">
+            <div id="box" class="track">
+                <div class="shiparea"></div>
+                <div id="capture" class="capture"></div>
+            </div>
+            <div id="box1" class="track">
+                <div class="shiparea"></div>
+                <div id="capture" class="capture"></div>
+            </div>
+        </div>
+        <div id="container" class="lower-panel">
+            <div id="colors" class="color-container"></div>
+            <div id="score">Score:0</div>
+            <div id="life">Life:3</div>
+        </div>
+</body>
+<script src="jquery-3.1.1.js"></script>
+<script src="ship-game.js"></script>
+
+
+</html>
