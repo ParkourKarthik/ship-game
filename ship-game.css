@@ -1,0 +1,122 @@
+body {
+    background: #00FFFF;
+}
+
+.track {
+    height: 100px;
+    margin: auto;
+    width: 700px;
+}
+
+.help-tip {
+    text-align: center
+}
+
+.shiparea {
+    margin: 50px 0 0 0px;
+    display: inline-block;
+}
+
+.moving-ship {
+    margin-left: 80px;
+    display: inline-block;
+}
+
+.vessel-top {
+    height: 15px;
+    width: 9px;
+    background: red;
+    position: relative;
+    margin-left: 30px;
+}
+
+.vessel-body {
+    border-top: 20px solid red;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 16px;
+}
+
+.capture {
+    margin-right: 40px;
+    margin-top: 40px;
+    float: right;
+    border: 1px solid black;
+    height: 50px;
+    width: 30px;
+    position: relative;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+.lower-panel {
+    width: 700px;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.color-container {
+    margin-right: 20px;
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+
+.color-block {
+    height: 50px;
+    width: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    background-color: white;
+    /* Green */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    /* Green */
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+.body-panel {
+    margin: auto;
+    width: 700px;
+}
+
+.upper-panel {
+    margin: auto;
+    width: 700px;
+}
+
+.score-board {
+    float: right;
+    position: relative;
+}
+
+#life {
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 2em;
+}
