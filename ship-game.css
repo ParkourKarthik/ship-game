@@ -1,11 +1,12 @@
 body {
-    background: #00FFFF;
+    background: #FF9800;
 }
 
 .track {
+    background-color: #2196F3;
     height: 100px;
     margin: auto;
-    width: 700px;
+    width: 100%;
 }
 
 .help-tip {
@@ -13,7 +14,7 @@ body {
 }
 
 .shiparea {
-    margin: 50px 0 0 0px;
+    margin: 35px 0 0 0px;
     display: inline-block;
 }
 
@@ -39,21 +40,27 @@ body {
 }
 
 .capture {
-    margin-right: 40px;
-    margin-top: 40px;
+    background-color: white;
+    margin-right: 10px;
+    margin-top: 25px;
     float: right;
     border: 1px solid black;
     height: 50px;
     width: 30px;
     position: relative;
-    display: inline-block;
+    display: block;
     -webkit-transition-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     /* Safari */
     transition-duration: 0.4s;
 }
 
+.capture:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .lower-panel {
-    width: 700px;
+    width: 100%;
     margin-top: 20px;
     margin: auto;
 }
@@ -73,36 +80,47 @@ body {
 }
 
 .button {
-    background-color: white;
+    /* background-color: white; */
     /* Green */
-    padding: 15px 32px;
+    padding: 3%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border: 2px solid #4CAF50;
+    box-shadow: 8px 8px 16px 0 rgba(0,0,0,0.2);
+    border: 2px solid #3F51B5;
+    border-radius: 5%;
     /* Green */
     -webkit-transition-duration: 0.4s;
     /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 5%;
 }
 
 .button:hover {
-    background-color: #4CAF50;
+    background-color: #3F51B5;
+    box-shadow: 16px 16px 32px 0 rgba(0,0,0,0.2);
     /* Green */
     color: white;
 }
 
 .body-panel {
-    margin: auto;
-    width: 700px;
+    margin: 5% 0%;
+    width: 100%;
+}
+
+body{
+    padding:50px 0px;
 }
 
 .upper-panel {
-    margin: auto;
-    width: 700px;
+    margin: auto auto;
+    width: 50%;
+    box-shadow: 16px 16px 32px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: white;
+    padding: 50px 16px;
 }
 
 .score-board {
