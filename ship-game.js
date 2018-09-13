@@ -55,7 +55,7 @@ function updateLife() {
     var curLife = parseInt(life.innerText.trim().replace('Life:', ''));
     curLife--;
     if (curLife == 0) {
-        document.body.innerHTML = '<div style="text-align:center"><b>GAME OVER</b></div>';
+        document.body.innerHTML = '<div class="center panel"><b>GAME OVER</b><div class="retry"><button class="button" onClick="window.location.reload()">RETRY</button></div></div>';
         stopMovingShips();
         stopShipGenerator();
     }
