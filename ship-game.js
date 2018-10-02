@@ -25,12 +25,19 @@ function checkAndUpdateScore(shippingArea) {
     var lastShip = shippingArea.lastChild;
     var capture = shippingArea.nextElementSibling;
     if (lastShip.offsetLeft + 46 >= capture.offsetLeft) {
-        if (lastShip.childNodes[0].style.backgroundColor == capture.style.backgroundColor)
+        if (lastShip.childNodes[0].style.backgroundColor == capture.style.backgroundColor) {
             updateScore();
-        else
-            updateLife();
+            shippingArea.removeChild(shippingArea.lastChild)
+        } else {
+            //updateLife();
+            var shipparts = shippingArea.lastChild.childNodes;
+            for (var i = 0; i < shipparts.length; i++) {
+                shipparts[i].classList.add('destroy');
+            }
+            shippingArea.lastChild.classList.remove('moving-ship');
+            setTimeout(() => shippingArea.removeChild(shippingArea.lastChild), 500);
+        }
         capture.style.background = ''; //('background', '');
-        shippingArea.removeChild(shippingArea.lastChild);
     }
 }
 

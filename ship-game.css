@@ -2,6 +2,30 @@ body {
     background: #FF9800;
 }
 
+@keyframes destroy {
+    to {
+        height: 0;
+        border: 0;
+        margin: 0;
+    }
+}
+
+@-webkit-keyframes destroy {
+    to {
+        height: 0;
+        border: 0;
+        margin: 0;
+    }
+}
+
+.destroy {
+    transition: transform 500ms;
+    -webkit-animation-name: destroy;
+    -webkit-animation-duration: 500ms;
+    animation-name: destroy;
+    animation-duration: 500ms;
+}
+
 .track {
     background-color: #2196F3;
     height: 100px;
