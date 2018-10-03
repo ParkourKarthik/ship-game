@@ -4,6 +4,14 @@ var shipSpeed = 10; // millisecond
 var vColors = ['red', 'blue', 'green'];
 
 
+window.onblur = function () {
+    togglePause('pause');
+};
+
+window.onfocus = function () {
+    togglePause('play');
+};
+
 //functions
 // Starts moving the ship by 1 pixel for the given time intervals.. Binds the function for adding pixel with a setInterval Timer..
 var moveShips = function () {
@@ -99,8 +107,10 @@ function stopShipGenerator() {
 
 
 //Toggle between pause and play..
-function togglePause() {
+function togglePause(ps) {
     var pause = document.getElementById('pause');
+    if (ps)
+        pause.innerText = ps.trim().toUpperCase();
     var colorElems = document.getElementById('colors').childNodes;
     if (pause.innerText.trim() == 'PAUSE') {
         stopMovingShips();
