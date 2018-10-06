@@ -2,7 +2,20 @@
 //Starting speed of the moving ship.. It would be updated when the score reaches a specific limit.. refer the checkAndUpdateScore()
 var shipSpeed = 10; // millisecond
 var vColors = ['red', 'blue', 'green'];
+var gameMode = 'run';
 
+
+window.onblur = function () {
+    if(gameMode == 'run'){
+        togglePause('pause');
+        gameMode = 'out';
+    }
+};
+
+window.onfocus = function () {
+    if(gameMode == 'out')
+    togglePause('play');
+};
 
 //functions
 // Starts moving the ship by 1 pixel for the given time intervals.. Binds the function for adding pixel with a setInterval Timer..
@@ -37,8 +50,10 @@ function checkAndUpdateScore(shippingArea) {
 //to start moving the ships
 function startMovingShips() {
     //Set repeated event
-    if (typeof timer == 'undefined')
+    if (typeof timer == 'undefined'){
         timer = setInterval(moveShips, shipSpeed);
+        gameMode = 'run';
+    }
 }
 
 //Stop the timer
@@ -46,6 +61,7 @@ function stopMovingShips() {
     if (typeof timer !== 'undefined')
         clearInterval(timer);
     timer = undefined;
+    gameMode = 'stop';
 }
 
 
@@ -58,6 +74,7 @@ function updateLife() {
         document.body.innerHTML = '<div class="center panel"><b>GAME OVER</b><div class="retry"><button class="button" onClick="window.location.reload()">RETRY</button></div></div>';
         stopMovingShips();
         stopShipGenerator();
+        gameMode = 'over';
     }
     life.innerText = 'Life:' + curLife;
 }
@@ -99,8 +116,10 @@ function stopShipGenerator() {
 
 
 //Toggle between pause and play..
-function togglePause() {
+function togglePause(ps) {
     var pause = document.getElementById('pause');
+    if (ps)
+        pause.innerText = ps.trim().toUpperCase();
     var colorElems = document.getElementById('colors').childNodes;
     if (pause.innerText.trim() == 'PAUSE') {
         stopMovingShips();
