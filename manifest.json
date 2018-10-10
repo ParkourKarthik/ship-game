@@ -1,0 +1,11 @@
+{
+    "short_name": "Ship Game",
+    "name": "Ship Game",
+    "icons": [],
+    "start_url": "index.html",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": ".",
+    "orientation": "landscape",
+    "theme_color": "#3367D6"
+}
